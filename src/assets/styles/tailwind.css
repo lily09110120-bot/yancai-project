@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f4f1ea] text-[#332c22] font-serif scroll-smooth overflow-x-hidden;
+    position: relative;
+  }
+
+  /* 模拟岩彩质感的全局噪点纹理 */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3 Blackboard%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* 自定义滚动条 */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#f4f1ea];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#8c4322]/30 rounded-full hover:bg-[#8c4322]/50 transition-colors;
+  }
+
+  /* 文本选择颜色 */
+  ::selection {
+    @apply bg-[#8c4322] text-white;
+  }
+}
+
+@layer components {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-3 bg-[#8c4322] text-white rounded-full text-sm font-bold tracking-widest hover:bg-[#a65430] transition-all transform hover:-translate-y-1 active:scale-95 shadow-lg hover:shadow-[#8c4322]/20;
+  }
+}
