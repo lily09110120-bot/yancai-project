@@ -9,7 +9,7 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 > 数字化呈现矿物颜料之美，探寻丝绸之路上的色彩基因。
 
 ## 🌐 在线预览
-[点击查看演示站点](你的Vercel链接)
+https://yancai-project.vercel.app
 
 ## ✨ 项目亮点
 - **沉浸式时间轴**：通过动态背景切换演示岩彩的历史变迁。
