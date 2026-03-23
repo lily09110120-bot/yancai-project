@@ -25,7 +25,7 @@
                 <div class="flex gap-4 mb-4">
                   <span v-for="tag in slide.tags" :key="tag" class="px-3 py-1 bg-black/30 border border-white/20 rounded-full text-xs tracking-widest uppercase">{{ tag }}</span>
                 </div>
-                <h2 class="text-6xl md:text-9xl font-bold tracking-[0.4em] animate-fade-in-up drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">{{ slide.title }}</h2>
+                <h2 class="text-6xl md:text-9xl font-bold tracking-[0.4em] animate-fade-in-up drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)] whitespace-nowrap">{{ slide.title }}</h2>
                 <p class="text-xl md:text-3xl font-light tracking-[0.3em] opacity-100 border-l-4 border-[#8c4322] pl-8 drop-shadow-xl">{{ slide.subtitle }}</p>
                 <button class="btn-primary mt-12">
                   开启艺术之旅
